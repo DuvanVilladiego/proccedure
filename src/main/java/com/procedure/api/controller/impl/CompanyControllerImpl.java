@@ -52,8 +52,8 @@ public class CompanyControllerImpl implements ICompanyController {
 
 	@Override
 	@PutMapping(Constants.COMPANY_SERVICE_UPDATE_BY_ID_PATH)
-	public ResponseEntity<GeneralResponseDto<CompanyDto>> updateCompany(@PathVariable int id, @RequestBody NewCompanyDto company) {
-		GeneralResponseDto<CompanyDto> response = service.update(id, company);
+	public ResponseEntity<GeneralResponseDto<FullCompanyDto>> updateCompany(@PathVariable int id, @RequestBody NewCompanyDto company) {
+		GeneralResponseDto<FullCompanyDto> response = service.update(id, company);
 		if (response.getStatus()) {
 			return ResponseEntity.ok(response);
 		} else {
@@ -63,8 +63,8 @@ public class CompanyControllerImpl implements ICompanyController {
 
 	@Override
 	@PutMapping(Constants.COMPANY_SERVICE_INSERT_PATH)
-	public ResponseEntity<GeneralResponseDto<CompanyDto>> insertCompany(@RequestBody NewCompanyDto company) {
-		GeneralResponseDto<CompanyDto> response = service.insert(company);
+	public ResponseEntity<GeneralResponseDto<FullCompanyDto>> insertCompany(@RequestBody NewCompanyDto company) {
+		GeneralResponseDto<FullCompanyDto> response = service.insert(company);
 		if (response.getStatus()) {
 			return ResponseEntity.ok(response);
 		} else {

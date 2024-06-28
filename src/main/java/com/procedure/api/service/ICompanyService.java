@@ -11,8 +11,8 @@ public interface ICompanyService {
 
 	public GeneralResponseDto<CompanyDto> getById(int id);
 	public GeneralResponseDto<Object> delete(int id);
-	public GeneralResponseDto<CompanyDto> update(int id, NewCompanyDto company);
-	public GeneralResponseDto<CompanyDto> insert(NewCompanyDto company);
+	public GeneralResponseDto<FullCompanyDto> update(int id, NewCompanyDto company);
+	public GeneralResponseDto<FullCompanyDto> insert(NewCompanyDto company);
 	public GeneralResponseDto<List<FullCompanyDto>> getAll();
 	
 }

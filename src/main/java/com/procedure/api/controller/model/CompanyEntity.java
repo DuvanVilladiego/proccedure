@@ -29,7 +29,13 @@ public class CompanyEntity {
 	private String company_name;
 	private String company_description;
 	
-	public FullCompanyDto toDto(CompanyEntity entity) {
+	public CompanyEntity(String company_code, String company_name, String company_description) {
+		this.company_code = company_code;
+		this.company_name = company_name;
+		this.company_description = company_description;
+	}
+	
+	public static FullCompanyDto toDto(CompanyEntity entity) {
 		return new FullCompanyDto(Long.valueOf(entity.getCompany_id()).intValue(), entity.getCompany_code(), entity.getCompany_name(), entity.getCompany_description());
 	}
 }

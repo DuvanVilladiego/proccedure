@@ -13,8 +13,8 @@ public interface ICompanyController {
 
 	public ResponseEntity<GeneralResponseDto<CompanyDto>> getCompany(int id);
 	public ResponseEntity<GeneralResponseDto<Object>> deleteCompany(int id);
-	public ResponseEntity<GeneralResponseDto<CompanyDto>> updateCompany(int id, NewCompanyDto company);
-	public ResponseEntity<GeneralResponseDto<CompanyDto>> insertCompany(NewCompanyDto company);
+	public ResponseEntity<GeneralResponseDto<FullCompanyDto>> updateCompany(int id, NewCompanyDto company);
+	public ResponseEntity<GeneralResponseDto<FullCompanyDto>> insertCompany(NewCompanyDto company);
 	public ResponseEntity<GeneralResponseDto<List<FullCompanyDto>>> getAllCompanies();
 	
 }
